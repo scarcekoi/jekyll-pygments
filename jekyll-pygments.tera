@@ -4,90 +4,89 @@ whiskers:
   matrix:
     - flavor
   filename: "css/jekyll-pygments-{{flavor.identifier}}.css"
+  hex_format: "#{{r}}{{g}}{{b}}{{z}}"
 ---
 
 /* ==================================================================== */
 /* Catppuccin {{ flavor.name }} Syntax Highlighting for Jekyll-Pygments */
 /* ==================================================================== */
 
-{% set c = flavor.colors %}
-
 /* Base and highlights */
 .highlight .hll {
-    background-color: #{{ c.base.hex }};
+    background-color: {{ base.hex }};
 }
 
 .highlight .c {
-    color: #{{ c.overlay2.hex }};
+    color: {{ overlay2.hex }};
     font-style: italic;
 } /* Comment */
 
 .highlight .err {
-    color: #{{ c.red.hex }};
-    background-color: #{{ c.peach.hex }};
+    color: {{ red.hex }};
+    background-color: {{ peach.hex }};
 } /* Error */
 
 .highlight .k {
-    color: #{{ c.mauve.hex }};
+    color: {{ mauve.hex }};
     font-weight: bold;
 } /* Keyword */
 
 .highlight .o {
-    color: #{{ c.sky.hex }};
+    color: {{ sky.hex }};
     font-weight: bold;
 } /* Operator */
 
 .highlight .cm {
-    color: #{{ c.overlay2.hex }};
+    color: {{ overlay2.hex }};
     font-style: italic;
 } /* Comment.Multiline */
 
 .highlight .cp {
-    color: #{{ c.mauve.hex }};
+    color: {{ mauve.hex }};
     font-weight: bold;
     font-style: italic;
 } /* Comment.Preproc */
 
 .highlight .c1 {
-    color: #{{ c.overlay2.hex }};
+    color: {{ overlay2.hex }};
     font-style: italic;
 } /* Comment.Single */
 
 .highlight .cs {
-    color: #{{ c.mauve.hex }};
+    color: {{ mauve.hex }};
     font-weight: bold;
     font-style: italic;
 } /* Comment.Special */
 
 .highlight .gd {
-    color: #{{ c.red.hex }};
-    background-color: rgba({{ c.red.rgb.r }}, {{ c.red.rgb.g }}, {{ c.red.rgb.b }}, 0.15);
+    color: {{ red.hex }};
+    background-color: rgba({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }}, 0.15);
 } /* Generic.Deleted */
 
 .highlight .ge {
-    color: #{{ c.subtext0.hex }};
+    color: {{ subtext0.hex }};
     font-style: italic;
 } /* Generic.Emph */
 
 .highlight .gr {
-    color: #{{ c.red.hex }};
+    color: {{ red.hex }};
 } /* Generic.Error */
 
 .highlight .gh {
-    color: #{{ c.subtext0.hex }};
+    color: {{ subtext0.hex }};
 } /* Generic.Heading */
 
 .highlight .gi {
-    color: #{{ c.green.hex }};
-    background-color: rgba({{ c.green.rgb.r }}, {{ c.green.rgb.g }}, {{ c.green.rgb.b }}, 0.15);
+    color: {{ green.hex }};
+    background-color: rgba({{ green.rgb.r }}, {{ green.rgb.g }}, {{ green.rgb.b }}, 0.15);
 } /* Generic.Inserted */
 
 .highlight .go {
-    color: #{{ c.subtext1.hex }};
+    color: {{ subtext1.hex }};
 } /* Generic.Output */
 
 .highlight .gp {
-    color: #{{ c.subtext0.hex }};
+    color: {{ subtext0.hex }};
 } /* Generic.Prompt */
 
 .highlight .gs {
@@ -95,11 +94,11 @@ whiskers:
 } /* Generic.Strong */
 
 .highlight .gu {
-    color: #{{ c.subtext0.hex }};
+    color: {{ subtext0.hex }};
 } /* Generic.Subheading */
 
 .highlight .gt {
-    color: #{{ c.red.hex }};
+    color: {{ red.hex }};
 } /* Generic.Traceback */
 
 .highlight .kc,
@@ -107,12 +106,12 @@ whiskers:
 .highlight .kn,
 .highlight .kp,
 .highlight .kr {
-    color: #{{ c.mauve.hex }};
+    color: {{ mauve.hex }};
     font-weight: bold;
 } /* Keyword Constant/Declaration/Namespace/Pseudo/Reserved */
 
 .highlight .kt {
-    color: #{{ c.yellow.hex }};
+    color: {{ yellow.hex }};
     font-weight: bold;
 } /* Keyword.Type */
 
@@ -121,7 +120,7 @@ whiskers:
 .highlight .mh,
 .highlight .mi,
 .highlight .mo {
-    color: #{{ c.peach.hex }};
+    color: {{ peach.hex }};
 } /* Literal.Number */
 
 .highlight .s,
@@ -134,15 +133,15 @@ whiskers:
 .highlight .si,
 .highlight .sx,
 .highlight .s1 {
-    color: #{{ c.green.hex }};
+    color: {{ green.hex }};
 } /* Literal.String variants */
 
 .highlight .sr {
-    color: #{{ c.teal.hex }};
+    color: {{ teal.hex }};
 } /* Literal.String.Regex */
 
 .highlight .ss {
-    color: #{{ c.pink.hex }};
+    color: {{ pink.hex }};
 } /* Literal.String.Symbol */
 
 .highlight .na,
@@ -150,55 +149,55 @@ whiskers:
 .highlight .vc,
 .highlight .vg,
 .highlight .vi {
-    color: #{{ c.blue.hex }};
+    color: {{ blue.hex }};
 } /* Name/Variable variants */
 
 .highlight .nb {
-    color: #{{ c.red.hex }};
+    color: {{ red.hex }};
 } /* Name.Builtin */
 
 .highlight .nc {
-    color: #{{ c.yellow.hex }};
+    color: {{ yellow.hex }};
     font-weight: bold;
 } /* Name.Class */
 
 .highlight .no {
-    color: #{{ c.green.hex }};
+    color: {{ green.hex }};
 } /* Name.Constant */
 
 .highlight .nd {
-    color: #{{ c.mauve.hex }};
+    color: {{ mauve.hex }};
     font-weight: bold;
 } /* Name.Decorator */
 
 .highlight .ni {
-    color: #{{ c.peach.hex }};
+    color: {{ peach.hex }};
 } /* Name.Entity */
 
 .highlight .ne,
 .highlight .nf,
 .highlight .nl {
-    color: #{{ c.red.hex }};
+    color: {{ red.hex }};
     font-weight: bold;
 } /* Name.Exception/Function/Label */
 
 .highlight .nn {
-    color: #{{ c.subtext0.hex }};
+    color: {{ subtext0.hex }};
 } /* Name.Namespace */
 
 .highlight .nt {
-    color: #{{ c.blue.hex }};
+    color: {{ blue.hex }};
 } /* Name.Tag */
 
 .highlight .ow {
-    color: #{{ c.sky.hex }};
+    color: {{ sky.hex }};
     font-weight: bold;
 } /* Operator.Word */
 
 .highlight .w {
-    color: #{{ c.subtext1.hex }};
+    color: {{ subtext1.hex }};
 } /* Text.Whitespace */
 
 .highlight .il {
-    color: #{{ c.peach.hex }};
+    color: {{ peach.hex }};
 } /* Literal.Number.Integer.Long */
